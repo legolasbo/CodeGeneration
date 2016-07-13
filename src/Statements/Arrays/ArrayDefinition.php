@@ -84,10 +84,6 @@ class ArrayDefinition extends Statement {
       return TRUE;
     }
 
-    if (is_array(reset($this->definition))) {
-      return TRUE;
-    }
-
     return FALSE;
   }
 

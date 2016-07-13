@@ -38,5 +38,12 @@ class PhpFileTest extends RenderTestBase {
     $this->assertEquals("<?php\n\ns1s2", $this->file->render());
   }
 
+  /**
+   * @test
+   */
+  public function toStringOutputIsIdenticalToRenderOutput() {
+    $this->file->addStatement(new SimpleStatementMock());
+    $this->assertSame((string) $this->file, $this->file->render());
+  }
 
 }
